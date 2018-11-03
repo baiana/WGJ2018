@@ -74,7 +74,7 @@ public class Player : MonoBehaviour {
 	private void GetInput()
 	{
 		_inputMovement = Input.GetAxisRaw("Horizontal");
-
+	
 		if (_inputMovement > 0f)
 			_inputMovement = 1f;
 		else if (_inputMovement < 0f)
@@ -82,6 +82,7 @@ public class Player : MonoBehaviour {
 
 		_inputJump = Input.GetButtonDown("Jump");
 		_inputReleaseJump = Input.GetButtonUp("Jump");
+		
 		ProcessPhysicsInput();
 	}
 
